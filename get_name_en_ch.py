@@ -87,6 +87,8 @@ for line in f1:
     line=line.strip('\r\n ').decode('utf8')
     if len(line)<2:
         continue
+    if not is_alphabet(line[0]):
+        continue
     flag=0#匹配[
     for c in line:
         if chn_name!='' and (not is_chinese(c)):
